@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer's Kit</title>
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: white;
+        }
+        .content {
+            padding: 20px;
+        }
+        .content h2 {
+            color: #4CAF50;
+        }
+        .content p, .content ul {
+            line-height: 1.6;
+        }
+        .dropdown {
+            margin-top: 20px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            text-align: left;
+            width: 100%;
+            border-radius: 5px;
+        }
+        .dropdown-content {
+            display: none;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        function toggleDropdown(id) {
+            var content = document.getElementById(id);
+            content.style.display = content.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Farmer's Kit</h1>
+    </header>
+    <nav>
+        <a href="IAGRO.html">Home</a>
+        <a href="#" onclick="toggleDropdown('insecticides');">Insecticides & Fertilizers</a>
+        <a href="#" onclick="toggleDropdown('machinery');">Machinery</a>
+        <a href="#" onclick="toggleDropdown('pesticides');">Pesticides</a>
+    </nav>
+    <div class="content">
+        <h2>Here is whats included in farmers kit </h2>
+        <h2>Insecticides</h2>
+        <button class="dropdown" onclick="toggleDropdown('insecticidesList')">Insecticides</button>
+        <div id="insecticidesList" class="dropdown-content">
+            <h3>Boric Acid</h3>
+            <img src="https://imgs.search.brave.com/evU3mD59Fo78q0ojglae9JOxHcJuBICW7ho6eeknznk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9kcmF4/ZS5jb20vd3AtY29u/dGVudC91cGxvYWRz/LzIwMTgvMTIvRHJB/eGVCb3JpY0FjaWRf/aGVhZGVyLmpwZw" alt="Boric Acid">
+            <p>Boric acid, also known as orthoboric acid or hydrogen borate, is a naturally occurring powder used as an insecticide...</p>
+            <ul>
+                <li>Cockroaches</li>
+                <li>Ants (sugar ants, little black ants)</li>
+                <li>Silverfish</li>
+                <li>Termites</li>
+                <li>Fleas</li>
+            </ul>
+
+            <h3>Horticultural Oil</h3>
+            <img src="" alt="Horticultural Oil">
+            <p>Horticultural oil is a type of pesticide used to control insects, mites, and some plant diseases...</p>
+
+            <h3>Neem</h3>
+            <img src="https://imgs.search.brave.com/chdw0T2NY-PuzMmbkucxWATqRyGBR93dr7GV-Pq3fLs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pMC53/cC5jb20vY2RuLXBy/b2QubWVkaWNhbG5l/d3N0b2RheS5jb20v/Y29udGVudC9pbWFn/ZXMvYXJ0aWNsZXMv/MzI1LzMyNTA0OC9u/ZWVtLXBsYW50LWFu/ZC1lc3NlbnRpYWwt/b2lsLmpwZz93PTEx/NTUmaD0xNTQx" alt="Neem">
+            <p>Neem oil is a natural, versatile insecticide derived from the seeds of the Neem tree (Azadirachta indica)...</p>
+        </div>
+
+        <h2>Machinery</h2>
+        <button class="dropdown" onclick="toggleDropdown('machineryList')">Machinery</button>
+        <div id="machineryList" class="dropdown-content">
+            <h3>Sprayer</h3>
+            <img src="https://www.tractorjunction.com/blog/wp-content/uploads/2020/11/image_2020_11_12T09_31_05_484Z.png" alt="Sprayer">
+            <p>Sprayers are widely used for farming purposes to protect crops from pests...</p>
+
+            <h3>Plough</h3>
+            <img src="https://www.tractorjunction.com/blog/wp-content/uploads/2020/11/image_2020_11_12T09_33_43_601Z-768x512.png" alt="Plough">
+            <p>The plough is a large farming implement used for loosening soil before planting and sowing seeds...</p>
+
+            <h3>Compost Machine</h3>
+            <img src="https://www.example.com/path-to-compost-machine-image.jpg" alt="Compost Machine">
+            <p>Compost machines play a vital role in agriculture by converting organic waste into nutrient-rich compost...</p>
+
+            <h3>Manure Making Machine</h3>
+            <img src="https://imgs.search.brave.com/f8vCvZzW6XVlxeC0rH1B7jtfCTuZgKxJ0qpkrgcMGEY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jb21w/b3N0dHVybmVybWFj/aGluZS5jb20vd3At/Y29udGVudC91cGxv/YWRzLzIwMjAvMDMv/U2VtaS1XZXQtTWFu/dXJlLUdyaW5kZXIt/Zm9yLUNvbXBvc3Qt/UHJvZHVjdGlvbi5q/cGc" alt="Manure Making Machine">
+            <p>Manure making machines are designed to convert animal waste into organic fertilizers...</p>
+        </div>
+
+        <h2>Pesticides</h2>
+        <button class="dropdown" onclick="toggleDropdown('pesticidesList')">Pesticides</button>
+        <div id="pesticidesList" class="dropdown-content">
+            <h3>Biological Pest Control</h3>
+            <p>Biological control is a method of controlling pests by using other organisms to suppress their populations...</p>
+            <h4>Key Benefits</h4>
+            <ul>
+                <li><strong>Reduced pesticide use:</strong> Biological control reduces reliance on synthetic pesticides...</li>
+                <li><strong>Flexibility:</strong> Biological control can be used in various settings...</li>
+                <li><strong>Targeted control:</strong> Biological control agents are specific to target pests...</li>
+                <li><strong>Long-term sustainability:</strong> Healthy ecosystems can maintain balance...</li>
+                <li><strong>Cost-effective:</strong> Long-term savings on pesticide costs...</li>
+            </ul>
+
+            <h3>Organic Fungicides</h3>
+            <p>Organic fungicides provide effective disease control without harming the environment...</p>
+            <h4>Types of Organic Fungicides</h4>
+            <ul>
+                <li><strong>Copper-based Fungicides:</strong>
+                    <ul>
+                        <li>Effective against a wide range of fungal diseases...</li>
+                    </ul>
+                </li>
+                <li><strong>Sulphur-based Fungicides:</strong>
+                    <ul>
+                        <li>Primarily used for powdery mildew control...</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </body>
+</html>

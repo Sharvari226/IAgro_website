@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>IAGRO - Account Management</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to IAGRO</h1>
+        <nav>
+            <!-- Add your navigation links here -->
+        </nav>
+    </header>
+
+    <main>
+        <!-- Other sections of IAGRO.html can go here -->
+
+        <div class="container">
+            <h2>Create Account</h2>
+            <form id="createAccountForm" action="account_management.php" method="post">
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <select id="userType" name="userType" required>
+                    <option value="" disabled selected>Select User Type</option>
+                    <option value="farmer">Farmer</option>
+                    <option value="buyer">Buyer</option>
+                </select>
+                <input type="text" id="phone" name="phone" placeholder="10 Digit Phone Number" maxlength="10" required pattern="\d{10}">
+                <input type="password" id="password" name="password" placeholder="Password (Min 8 characters)" minlength="8" required>
+                <input type="hidden" name="action" value="create_account">
+                <button type="submit">Create Account</button>
+            </form>
+
+            <h2>Login Account</h2>
+            <form id="loginForm" action="account_management.php" method="post">
+                <input type="text" id="loginPhone" name="loginPhone" placeholder="10 Digit Phone Number" maxlength="10" required pattern="\d{10}">
+                <input type="password" id="loginPassword" name="loginPassword" placeholder="Password" required>
+                <input type="hidden" name="action" value="login">
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 IAGRO. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
